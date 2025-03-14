@@ -1,0 +1,34 @@
+name: Simulación de CI/CD Pipeline  
+
+on: [push]  # Se ejecuta en cada push al repositorio  
+
+jobs:  
+  build:  
+    runs-on: ubuntu-latest  # Máquina virtual de GitHub  
+
+    steps:  
+      - name: Checkout del código  
+        uses: actions/checkout@v2  # Obtiene el código fuente  
+      
+      - name: Instalación de dependencias  
+        run: echo "Instalando dependencias..." && sleep 2  
+
+      - name: Ejecución de pruebas  
+        run: |
+          echo "Ejecutando pruebas automatizadas..."
+          sleep 3
+          echo "✅ Todas las pruebas pasaron exitosamente"  
+
+      - name: Construcción del artefacto  
+        run: |
+          echo "Construyendo aplicación..."
+          sleep 2
+          echo "✅ Artefacto de despliegue creado"  
+
+      - name: Simulación de despliegue en la nube  
+        run: |
+          echo "📡 Conectando con AWS/GCP/Azure..."
+          sleep 3
+          echo "📂 Subiendo archivos a la nube..."
+          sleep 3
+          echo "🚀 Despliegue exitoso en https://fake-cloud.com/deployment"
