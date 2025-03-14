@@ -31,4 +31,4 @@ jobs:
           sleep 3
           echo "📂 Subiendo archivos a la nube..."
           sleep 3
-          echo "🚀 Despliegue exitoso en https://fake-cloud.com/deployment"
+          echo "🚀 Nueva versión desplegada correctamente en https://fake-cloud.com/v2"
